@@ -30,6 +30,26 @@ html {
     z-index: 1;
 }
 
-.semicircle-container {
-    
+.semicircle {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+} 
+
+.semicircle:nth-child(1) {
+  background-color: red;
+  z-index: 2;
+}
+
+.semicircle:nth-child(2){
+    background-color: blue;
+    z-index: 3;
+}
+
+.semicircle:nth-child(3) {
+    background-color: white;
+    z-index: 4;
+    display: none;
 }
