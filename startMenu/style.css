@@ -1,3 +1,8 @@
+:root{
+    --start-menu-btnC: #2c271eb3;
+    --hover-start-menu-btnC: #000000b0;
+    --text-color: #fff;
+}
 body{
     height: 100vh;
     overflow: hidden;
@@ -8,7 +13,10 @@ body{
 .start-menu{
     width: 350px;
     height: 400px;
-    background-color: rgb(113, 255, 122);
+    background-image: url(photo-1515446134809-993c501ca304.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,11 +33,12 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    background-color: rgb(240, 231, 250);
+    background: var(--start-menu-btnC);
     cursor: pointer;
+    color: var(--text-color);
 }
 .start-btn:hover , .guid-btn:hover{
-    background-color: rgb(194, 248, 188);
+    background: var(--hover-start-menu-btnC);
 }
 .hide-menu{
     opacity: 0;
@@ -43,7 +52,10 @@ body{
     opacity: 1;
     width: 350px;
     height: 400px;
-    background-color: rgb(113, 255, 122);
+    background-image: url(photo-1515446134809-993c501ca304.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;

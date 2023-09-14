@@ -1,20 +1,5 @@
-/* general css */
-/* add fonts */
-@font-face {
-    font-family: retro_computer_personal_use;
-    src: url("../fonts/retro_computer_personal_use.ttf");
-}
-/* general stuff */
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: retro_computer_personal_use;
-}
+
 /* css varibles */
 :root{
-    --bg-color: ;
-    --font-color: ;
-    --start-menu-btnC: ;
-    --start-menu-bgC: ;
+    --start-menu-btnC: #f5bb4f;
 }
