@@ -30,7 +30,7 @@ body{
 }
 .start-btn:hover , .guid-btn:hover{
     background-color: rgb(194, 248, 188);
-}z
+}
 .hide-menu{
     opacity: 0;
     display: none;
