@@ -1,0 +1,15 @@
+.character {
+  width: 60px;
+  height: 80px;
+ 
+  position: absolute;
+}
+#player1 {
+  top: 0;
+  left: 0;
+}
+
+#player2 {
+  right: 0;
+  bottom: 100px; /* Adjust the initial position of player2 */
+}
