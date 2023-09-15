@@ -6,9 +6,10 @@ const guidBtn = document.querySelector(".guid-btn");
 const startMenu = document.querySelector(".start-menu");
 const guidMenu = document.querySelector(".guid-menu");
 const containerStartMenu = document.querySelector(".container-start-menu");
+const myAudio = document.getElementById("myAudio");
 
 displayTime(30);
-
+// timer
 const countDown = setInterval(()=>{
   timeSecond--;
   displayTime(timeSecond);
@@ -26,14 +27,14 @@ function displayTime(second){
   `; 
 
 }
-
+// end timer
 function endCount(){
   if (timeH.innerHTML = 'Time out') {
     container.style.width="150px"
   }
 }
 
-
+// menu start
 startBtn.addEventListener("click", function () {
   containerStartMenu.classList.add("hide-menu");
   startMenu.classList.add("hide-menu");
@@ -42,4 +43,10 @@ guidBtn.addEventListener("click", function () {
   startMenu.classList.add("hide-menu");
   guidMenu.classList.add("show-giud");
 });
+
+function playAudio(){
+  myAudio.play();
+}
+
+
 

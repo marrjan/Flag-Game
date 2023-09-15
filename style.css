@@ -14,7 +14,13 @@
     background-position: center;
     z-index: 1;
     overflow: hidden;
+    margin: 0;
     
+  }
+
+  button{
+    border: none;
+    color: #fff;
   }
   /* mahsa */
   :root{
@@ -22,11 +28,6 @@
     --hover-start-menu-btnC: #000000b0;
     --text-color: #fff;
 }
-/* body{
-    margin: 0;
-    height: 100vh;
-    overflow: hidden;
-} */
 .container-start-menu{
     display: flex;
     flex-direction: column;
