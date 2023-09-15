@@ -13,7 +13,7 @@
     <div class="container-start-menu">
         <h2>Flag Game</h2>
         <div class="start-menu">
-            <button onclick="playAudio()" class="start-btn">Start</button>
+            <button id="myBtn" onclick="playAudio()" class="start-btn">Start</button>
             <audio id="myAudio">
                 <source src="voices/fight.ogg">
             </audio>
@@ -39,16 +39,19 @@
           <h1>00:00</h1>
         </div>
       </section>
+       <!-- marjan code end -->
 
+       <!-- mostfa code start -->
        <section>
         <div class="container-two">
             <div class="map">
-                 <img  class="avatar-one" src="img/Poses/adventurer_action1.png" alt="">
-                 <img src="img/Poses/soldier_cheer1.png" alt="">
+                <div id="player1" class="character"><img src="img/Poses/adventurer_action1.png" alt=""></div>
+                <div id="player2" class="character"><img src="img/Poses/soldier_swim2.png" alt=""></div>
             </div>
         </div>
        </section>
-       <!-- marjan code end -->
+       <!-- mostafa code end -->
+      
     <script src="app.js"></script>
 </body>
 </html>
