@@ -12,6 +12,11 @@ const player2 = document.getElementById('player2');
 const myBtn = document.getElementById('myBtn');
 const myVoice = document.getElementById("myVoice");
 const myVoiceTwo = document.getElementById("myVoiceTwo");
+const round = document.querySelector(".round");
+const footVoice = document.getElementById("footVoice");
+
+
+
 
 const minDistance = 20; // Minimum distance between players (adjusted to 20 pixels)
 
@@ -31,7 +36,7 @@ const keysPressedPlayer2 = {
 // marjan
 myBtn.addEventListener("click" , function () {
   
-  displayTime(50);
+  displayTime(30);
   // timer
   const countDown = setInterval(()=>{
     timeSecond--;
@@ -41,6 +46,7 @@ myBtn.addEventListener("click" , function () {
       clearInterval(countDown);
     }
   }, 1000);
+    
   
   function displayTime(second){
     const min = Math.floor(second / 60);
@@ -93,6 +99,7 @@ function detectKeys() {
       if (!isColliding(player1.offsetTop, newLeft, player1, player2)) {
           player1.style.left = newLeft + 'px';
       }
+      footVoice.play();
   }
   if (keysPressedPlayer1.ArrowRight) {
       // right arrow
@@ -100,6 +107,7 @@ function detectKeys() {
       if (!isColliding(player1.offsetTop, newLeft, player1, player2)) {
           player1.style.left = newLeft + 'px';
       }
+      footVoice.play();
   }
   if (keysPressedPlayer1.ArrowUp) {
       // up arrow
@@ -107,6 +115,7 @@ function detectKeys() {
       if (!isColliding(newTop, player1.offsetLeft, player1, player2)) {
           player1.style.top = newTop + 'px';
       }
+      footVoice.play();
   }
   if (keysPressedPlayer1.ArrowDown) {
       // down arrow
@@ -114,6 +123,7 @@ function detectKeys() {
       if (!isColliding(newTop, player1.offsetLeft, player1, player2)) {
           player1.style.top = newTop + 'px';
       }
+      footVoice.play();
   }
 
   // Player 2 movement
@@ -123,6 +133,7 @@ function detectKeys() {
       if (!isColliding(player2.offsetTop, newLeft, player2, player1)) {
           player2.style.left = newLeft + 'px';
       }
+      footVoice.play();
   }
   if (keysPressedPlayer2.d) {
       // 'd' key
@@ -130,6 +141,7 @@ function detectKeys() {
       if (!isColliding(player2.offsetTop, newLeft, player2, player1)) {
           player2.style.left = newLeft + 'px';
       }
+      footVoice.play();
   }
   if (keysPressedPlayer2.w) {
       // 'w' key
@@ -137,6 +149,7 @@ function detectKeys() {
       if (!isColliding(newTop, player2.offsetLeft, player2, player1)) {
           player2.style.top = newTop + 'px';
       }
+      footVoice.play();
   }
   if (keysPressedPlayer2.s) {
       // 's' key
@@ -144,6 +157,7 @@ function detectKeys() {
       if (!isColliding(newTop, player2.offsetLeft, player2, player1)) {
           player2.style.top = newTop + 'px';
       }
+      footVoice.play();
   }
 }
 
