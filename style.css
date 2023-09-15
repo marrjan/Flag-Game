@@ -112,6 +112,7 @@ section{
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 h1{
@@ -159,3 +160,49 @@ display: none;
  
 }
 
+/* wall */
+
+.walls{
+  position: relative;
+}
+.wall-two {
+  position: absolute;
+  top: 400px;
+  left:50px;
+}
+
+.wall-three {
+  position: absolute;
+  left: 120px;
+  top: 10px;
+}
+
+.wall-four {
+ position: absolute;
+ bottom: 50px;
+ top: 500px;
+}
+
+.wall-five {
+  position: absolute;
+  top: 300px;
+  right: 140px;
+}
+
+.wall-six {
+  position: absolute;
+  right: 180px;
+}
+
+.wall-seven {
+  position: absolute;
+  top: 100px;
+  right: 300px;
+  left: 300px;
+}
+
+.wall-eight {
+  position: absolute;
+  right: 500px;
+  top: 100px;
+}
