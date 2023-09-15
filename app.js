@@ -1,5 +1,11 @@
 let timeSecond = 30;
 const timeH = document.querySelector('h1');
+const container = document.querySelector('.container');
+const startBtn = document.querySelector(".start-btn");
+const guidBtn = document.querySelector(".guid-btn");
+const startMenu = document.querySelector(".start-menu");
+const guidMenu = document.querySelector(".guid-menu");
+const containerStartMenu = document.querySelector(".container-start-menu");
 
 displayTime(30);
 
@@ -22,5 +28,18 @@ function displayTime(second){
 }
 
 function endCount(){
-  timeH.innerHTML = 'Time out';
+  if (timeH.innerHTML = 'Time out') {
+    container.style.width="150px"
+  }
 }
+
+
+startBtn.addEventListener("click", function () {
+  containerStartMenu.classList.add("hide-menu");
+  startMenu.classList.add("hide-menu");
+});
+guidBtn.addEventListener("click", function () {
+  startMenu.classList.add("hide-menu");
+  guidMenu.classList.add("show-giud");
+});
+
