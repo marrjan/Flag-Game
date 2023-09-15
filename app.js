@@ -1,4 +1,4 @@
-let timeSecond = 50;
+let timeSecond = 30;
 const timeH = document.querySelector('h1');
 const container = document.querySelector('.container');
 const startBtn = document.querySelector(".start-btn");
@@ -10,6 +10,8 @@ const myAudio = document.getElementById("myAudio");
 const player1 = document.getElementById('player1');
 const player2 = document.getElementById('player2');
 const myBtn = document.getElementById('myBtn');
+const myVoice = document.getElementById("myVoice");
+const myVoiceTwo = document.getElementById("myVoiceTwo");
 
 const minDistance = 20; // Minimum distance between players (adjusted to 20 pixels)
 
@@ -46,13 +48,19 @@ myBtn.addEventListener("click" , function () {
     timeH.innerHTML = `
     ${(min < 10) ? '0' : ''}${min}:${(sec < 10) ? '0' : ''}${sec}
     `; 
+    if (timeSecond <= 5) {
+      myVoice.play();
+      timeH.style.color="red";
+    }
   
   }
   
   function endCount(){
     if (timeH.innerHTML = 'Time out') {
-      container.style.width="150px"
+      container.style.width="150px";
+      myVoiceTwo.play();
     }
+    
   }
   // end timer
 });
