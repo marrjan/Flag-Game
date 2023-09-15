@@ -27,32 +27,35 @@ const keysPressedPlayer2 = {
     s: false,
 };
 // marjan
-displayTime(50);
-// timer
-const countDown = setInterval(()=>{
-  timeSecond--;
-  displayTime(timeSecond);
-  if(timeSecond == 0 || timeSecond < 1){
-    endCount();
-    clearInterval(countDown);
+myBtn.addEventListener("click" , function () {
+  
+  displayTime(50);
+  // timer
+  const countDown = setInterval(()=>{
+    timeSecond--;
+    displayTime(timeSecond);
+    if(timeSecond == 0 || timeSecond < 1){
+      endCount();
+      clearInterval(countDown);
+    }
+  }, 1000);
+  
+  function displayTime(second){
+    const min = Math.floor(second / 60);
+    const sec = Math.floor(second % 60);
+    timeH.innerHTML = `
+    ${(min < 10) ? '0' : ''}${min}:${(sec < 10) ? '0' : ''}${sec}
+    `; 
+  
   }
-}, 1000);
-
-function displayTime(second){
-  const min = Math.floor(second / 60);
-  const sec = Math.floor(second % 60);
-  timeH.innerHTML = `
-  ${(min < 10) ? '0' : ''}${min}:${(sec < 10) ? '0' : ''}${sec}
-  `; 
-
-}
-
-function endCount(){
-  if (timeH.innerHTML = 'Time out') {
-    container.style.width="150px"
+  
+  function endCount(){
+    if (timeH.innerHTML = 'Time out') {
+      container.style.width="150px"
+    }
   }
-}
-// end timer
+  // end timer
+});
 
 // menu start mahsa
 startBtn.addEventListener("click", function () {
