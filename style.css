@@ -168,7 +168,7 @@ display: none;
 .wall-two {
   position: absolute;
   top: 400px;
-  left:50px;
+  left:150px;
 }
 
 .wall-three {
@@ -192,17 +192,25 @@ display: none;
 .wall-six {
   position: absolute;
   right: 180px;
+  top: 150px;
 }
 
 .wall-seven {
   position: absolute;
   top: 100px;
-  right: 300px;
+  right: 500px;
   left: 300px;
 }
 
 .wall-eight {
   position: absolute;
-  right: 500px;
+  right: 550px;
   top: 100px;
+}
+
+.wall-nine {
+  position: absolute;
+  top: 300px;
+  right: 600px;
+  left: 500px;
 }
