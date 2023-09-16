@@ -140,9 +140,11 @@ h1{
 }
 /* mostafa */
 .flag{
-  width: 20px;
-  height: 20px;
-  background-color: #000;
+  width: 30px;
+  height: 30px;
+  background-image: url(img/flag/icons8-empty-flag-30.png);
+  background-size: cover;
+  margin-top: 150px;
 }
 .character {
 width: 60px;
@@ -162,10 +164,12 @@ display: none;
  display: none;
 }
 .flagPlayerOne, .flagPlayerTwo{
-  width: 20px;
-  height: 20px;
-  background-color: #000;
+  width: 30px;
+  height: 30px;
+  background-image: url(img/flag/icons8-empty-flag-30.png);
+  background-size: cover;
   display: none;
+  transform: translate(60px,-80px);
 }
 
 /* wall */
