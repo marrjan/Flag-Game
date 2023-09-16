@@ -16,7 +16,6 @@ body {
   z-index: 1;
   overflow: hidden;
   margin: 0;
-  
 }
 
 button{
@@ -140,6 +139,11 @@ h1{
   margin-top: 75px;
 }
 /* mostafa */
+.flag{
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+}
 .character {
 width: 60px;
 height: 80px;
@@ -150,14 +154,18 @@ position: absolute;
 top: 0;
 left: 0;
 display: none;
-
 }
 
 #player2 {
  right: 0;
  bottom: 100px;
  display: none;
- 
+}
+.flagPlayerOne, .flagPlayerTwo{
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  display: none;
 }
 
 /* wall */
