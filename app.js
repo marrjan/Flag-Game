@@ -65,13 +65,19 @@ myBtn.addEventListener("click", function () {
 });
 
 // menu start mahsa
+const closeWindow = document.querySelector(".close-window");
 startBtn.addEventListener("click", function () {
   containerStartMenu.classList.add("hide-menu");
   startMenu.classList.add("hide-menu");
 });
 guidBtn.addEventListener("click", function () {
-  startMenu.classList.add("hide-menu");
   guidMenu.classList.add("show-giud");
+  startMenu.classList.add("hide-menu");
+  startMenu.classList.remove("show-menu");
+});
+closeWindow.addEventListener("click", function () {
+  guidMenu.classList.remove("show-giud");
+  startMenu.classList.add("show-menu");
 });
 
 function playAudio() {
