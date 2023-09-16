@@ -14,6 +14,7 @@ const myVoice = document.getElementById("myVoice");
 const myVoiceTwo = document.getElementById("myVoiceTwo");
 const round = document.querySelector(".round");
 const footVoice = document.getElementById("footVoice");
+const close = document.getElementById("close");
 
 const minDistance = 20; // Minimum distance between players (adjusted to 20 pixels)
 
@@ -78,6 +79,7 @@ guidBtn.addEventListener("click", function () {
 closeWindow.addEventListener("click", function () {
   guidMenu.classList.remove("show-giud");
   startMenu.classList.add("show-menu");
+  close.play();
 });
 
 function playAudio() {
