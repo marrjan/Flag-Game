@@ -15,7 +15,7 @@ const myVoiceTwo = document.getElementById("myVoiceTwo");
 const round = document.querySelector(".round");
 const footVoice = document.getElementById("footVoice");
 const close = document.getElementById("close");
-const getFlag = document.getElementById("getFlag")
+const getFlag = document.getElementById("getFlag");
 
 const minDistance = 20; // Minimum distance between players (adjusted to 20 pixels)
 
@@ -34,12 +34,7 @@ const keysPressedPlayer2 = {
 };
 // marjan
 
-  
-  myBtn.addEventListener("click", function () {   
-  });
- 
-  
-
+myBtn.addEventListener("click", function () {});
 
 // menu start mahsa
 const closeWindow = document.querySelector(".close-window");
@@ -235,70 +230,78 @@ document.addEventListener("keydown", function (e) {
       flag.style.display = "none";
       flagPlayerOne.style.display = "block";
       displayTime(30);
-  // timer
-  const countDown = setInterval(() => {
-    timeSecond--;
-    displayTime(timeSecond);
-    if (timeSecond == 0 || timeSecond < 1) {
-      endCount();
-      clearInterval(countDown);
-    }
-  }, 1000);
+      // timer
+      const countDown = setInterval(() => {
+        timeSecond--;
+        displayTime(timeSecond);
+        if (timeSecond == 0 || timeSecond < 1) {
+          endCount();
+          clearInterval(countDown);
+        }
+      }, 1000);
 
-  function displayTime(second) {
-    const min = Math.floor(second / 60);
-    const sec = Math.floor(second % 60);
-    timeH.innerHTML = `
+      function displayTime(second) {
+        const min = Math.floor(second / 60);
+        const sec = Math.floor(second % 60);
+        timeH.innerHTML = `
     ${min < 10 ? "0" : ""}${min}:${sec < 10 ? "0" : ""}${sec}
     `;
-    if (timeSecond <= 5) {
-      myVoice.play();
-      timeH.style.color = "red";
-    }
-  }
+        if (timeSecond <= 5) {
+          myVoice.play();
+          timeH.style.color = "red";
+        }
+        // when player one is winner.
+        if (timeSecond <= 0 && flagPlayerOne.style.display == "block") {
+          alert("mahsaaa");
+        }
+        // when player two is winner.
+        if (timeSecond <= 0 && flagPlayerTwo.style.display == "block") {
+          alert("m");
+        }
+      }
 
-  function endCount() {
-    if ((timeH.innerHTML = "Time out")) {
-      container.style.width = "150px";
-      myVoiceTwo.play();
-    }
-  }
-  getFlag.play();
+      function endCount() {
+        if ((timeH.innerHTML = "Time out")) {
+          container.style.width = "150px";
+          myVoiceTwo.play();
+        }
+      }
+      getFlag.play();
     }
   } else if (distanceFlagXPlayerTwo < 50 && distanceFlagXPlayerTwo > -20) {
     if (e.key == "e") {
       flag.style.display = "none";
       flagPlayerTwo.style.display = "block";
       displayTime(30);
-  // timer
-  const countDown = setInterval(() => {
-    timeSecond--;
-    displayTime(timeSecond);
-    if (timeSecond == 0 || timeSecond < 1) {
-      endCount();
-      clearInterval(countDown);
-    }
-  }, 1000);
+      // timer
+      const countDown = setInterval(() => {
+        timeSecond--;
+        displayTime(timeSecond);
+        if (timeSecond == 0 || timeSecond < 1) {
+          endCount();
+          clearInterval(countDown);
+        }
+      }, 1000);
 
-  function displayTime(second) {
-    const min = Math.floor(second / 60);
-    const sec = Math.floor(second % 60);
-    timeH.innerHTML = `
+      function displayTime(second) {
+        const min = Math.floor(second / 60);
+        const sec = Math.floor(second % 60);
+        timeH.innerHTML = `
     ${min < 10 ? "0" : ""}${min}:${sec < 10 ? "0" : ""}${sec}
     `;
-    if (timeSecond <= 5) {
-      myVoice.play();
-      timeH.style.color = "red";
-    }
-  }
+        if (timeSecond <= 5) {
+          myVoice.play();
+          timeH.style.color = "red";
+        }
+      }
 
-  function endCount() {
-    if ((timeH.innerHTML = "Time out")) {
-      container.style.width = "150px";
-      myVoiceTwo.play();
-    }
-  }
-  getFlag.play();
+      function endCount() {
+        if ((timeH.innerHTML = "Time out")) {
+          container.style.width = "150px";
+          myVoiceTwo.play();
+        }
+      }
+      getFlag.play();
     }
   } else if (distanceOfPlayersX < 20 && distanceOfPlayersX > -70) {
     if (e.key == "Enter") {
@@ -311,7 +314,6 @@ document.addEventListener("keydown", function (e) {
       flagPlayerTwo.style.display = "block";
     }
   }
-  
 });
 // charachter's can get and keep the flag.[end]
 
@@ -329,4 +331,3 @@ myBtn.addEventListener("click", function () {
     player2.style.display = "block";
   }
 });
-
