@@ -32,38 +32,13 @@ const keysPressedPlayer2 = {
   s: false,
 };
 // marjan
-myBtn.addEventListener("click", function () {
-  displayTime(30);
-  // timer
-  const countDown = setInterval(() => {
-    timeSecond--;
-    displayTime(timeSecond);
-    if (timeSecond == 0 || timeSecond < 1) {
-      endCount();
-      clearInterval(countDown);
-    }
-  }, 1000);
 
-  function displayTime(second) {
-    const min = Math.floor(second / 60);
-    const sec = Math.floor(second % 60);
-    timeH.innerHTML = `
-    ${min < 10 ? "0" : ""}${min}:${sec < 10 ? "0" : ""}${sec}
-    `;
-    if (timeSecond <= 5) {
-      myVoice.play();
-      timeH.style.color = "red";
-    }
-  }
+  
+  myBtn.addEventListener("click", function () {   
+  });
+ 
+  
 
-  function endCount() {
-    if ((timeH.innerHTML = "Time out")) {
-      container.style.width = "150px";
-      myVoiceTwo.play();
-    }
-  }
-  // end timer
-});
 
 // menu start mahsa
 const closeWindow = document.querySelector(".close-window");
@@ -258,11 +233,69 @@ document.addEventListener("keydown", function (e) {
     if (e.key == "Enter") {
       flag.style.display = "none";
       flagPlayerOne.style.display = "block";
+      displayTime(30);
+  // timer
+  const countDown = setInterval(() => {
+    timeSecond--;
+    displayTime(timeSecond);
+    if (timeSecond == 0 || timeSecond < 1) {
+      endCount();
+      clearInterval(countDown);
+    }
+  }, 1000);
+
+  function displayTime(second) {
+    const min = Math.floor(second / 60);
+    const sec = Math.floor(second % 60);
+    timeH.innerHTML = `
+    ${min < 10 ? "0" : ""}${min}:${sec < 10 ? "0" : ""}${sec}
+    `;
+    if (timeSecond <= 5) {
+      myVoice.play();
+      timeH.style.color = "red";
+    }
+  }
+
+  function endCount() {
+    if ((timeH.innerHTML = "Time out")) {
+      container.style.width = "150px";
+      myVoiceTwo.play();
+    }
+  }
     }
   } else if (distanceFlagXPlayerTwo < 50 && distanceFlagXPlayerTwo > -20) {
     if (e.key == "e") {
       flag.style.display = "none";
       flagPlayerTwo.style.display = "block";
+      displayTime(30);
+  // timer
+  const countDown = setInterval(() => {
+    timeSecond--;
+    displayTime(timeSecond);
+    if (timeSecond == 0 || timeSecond < 1) {
+      endCount();
+      clearInterval(countDown);
+    }
+  }, 1000);
+
+  function displayTime(second) {
+    const min = Math.floor(second / 60);
+    const sec = Math.floor(second % 60);
+    timeH.innerHTML = `
+    ${min < 10 ? "0" : ""}${min}:${sec < 10 ? "0" : ""}${sec}
+    `;
+    if (timeSecond <= 5) {
+      myVoice.play();
+      timeH.style.color = "red";
+    }
+  }
+
+  function endCount() {
+    if ((timeH.innerHTML = "Time out")) {
+      container.style.width = "150px";
+      myVoiceTwo.play();
+    }
+  }
     }
   } else if (distanceOfPlayersX < 20 && distanceOfPlayersX > -70) {
     if (e.key == "Enter") {
@@ -275,6 +308,7 @@ document.addEventListener("keydown", function (e) {
       flagPlayerTwo.style.display = "block";
     }
   }
+  
 });
 // charachter's can get and keep the flag.[end]
 
@@ -292,3 +326,4 @@ myBtn.addEventListener("click", function () {
     player2.style.display = "block";
   }
 });
+
