@@ -15,6 +15,7 @@ const myVoiceTwo = document.getElementById("myVoiceTwo");
 const round = document.querySelector(".round");
 const footVoice = document.getElementById("footVoice");
 const close = document.getElementById("close");
+const getFlag = document.getElementById("getFlag")
 
 const minDistance = 20; // Minimum distance between players (adjusted to 20 pixels)
 
@@ -262,6 +263,7 @@ document.addEventListener("keydown", function (e) {
       myVoiceTwo.play();
     }
   }
+  getFlag.play();
     }
   } else if (distanceFlagXPlayerTwo < 50 && distanceFlagXPlayerTwo > -20) {
     if (e.key == "e") {
@@ -296,6 +298,7 @@ document.addEventListener("keydown", function (e) {
       myVoiceTwo.play();
     }
   }
+  getFlag.play();
     }
   } else if (distanceOfPlayersX < 20 && distanceOfPlayersX > -70) {
     if (e.key == "Enter") {
