@@ -1,4 +1,4 @@
-let timeSecond = 10;
+let timeSecond = 30;
 const timeH = document.querySelector("h1");
 const container = document.querySelector(".container");
 const startBtn = document.querySelector(".start-btn");
