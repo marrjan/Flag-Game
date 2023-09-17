@@ -336,7 +336,7 @@ document.addEventListener("keydown", function (e) {
     if (e.key == "Enter") {
       flag.style.display = "none";
       flagPlayerOne.style.display = "block";
-<<<<<<< HEAD
+
       displayTime(30);
       // timer
       const countDown = setInterval(() => {
@@ -377,8 +377,7 @@ document.addEventListener("keydown", function (e) {
         }
       }
       getFlag.play();
-=======
->>>>>>> b4e76c2f253b68d6219f3b3577b75f5c55698134
+
     }
   } else if (distanceFlagXPlayerTwo < 50 && distanceFlagXPlayerTwo > -20) {
     if (e.key == "e") {
