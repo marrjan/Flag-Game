@@ -43,8 +43,12 @@ button{
   font-size: 60px;
 }
 .start-menu{
-  width: 600px;
+  width: 350px;
   height: 400px;
+  background-image: url(photo-1515446134809-993c501ca304.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,48 +76,25 @@ button{
   opacity: 0;
   display: none;
 }
-.show-menu{
-  opacity: 1;
-  width: 600px;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 30px;
-  align-items: center;
-  border-radius: 20px;
-  z-index: 10;
-  margin-bottom: 100px;
-}
 .guid-menu{
   opacity: 0;
   display: none;
 }
 .guid-bord{
   background-color: var(--start-menu-btnC);
-  width: 500px;
-  height: 100%;
-  margin-top: 20px;
+  height: 92%;
+  width: 85%;
   font-size: 20px;
-  padding: 10px 15px;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.guid-bord img{
-  width: 30px;
-}
-.guid-bord img:active{
-  transform: scale(.7,.7);
-}
-.guid-bord p{
-  margin-top: 20px;
+  padding: 0px 15px;
 }
 .show-giud{
   opacity: 1;
   width: 350px;
   height: 400px;
+  background-image: url(photo-1515446134809-993c501ca304.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -169,6 +150,7 @@ h1{
 width: 60px;
 height: 80px;
 position: absolute;
+
 }
 #player1 {
 top: 0;
@@ -199,6 +181,7 @@ display: none;
   position: absolute;
   top: 400px;
   left:150px;
+  background:red
 }
 
 .wall-three {
@@ -244,6 +227,7 @@ display: none;
   right: 600px;
   left: 500px;
 }
+<<<<<<< HEAD
 /* modal for show winner */
 .modal-container {
   width: 100%;
@@ -319,3 +303,6 @@ border-radius: 15px;
   margin-top: 7px;
   margin-left: 1.9px;
 }
+=======
+
+>>>>>>> b4e76c2f253b68d6219f3b3577b75f5c55698134
