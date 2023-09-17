@@ -1,4 +1,4 @@
-let timeSecond = 30;
+let timeSecond = 10;
 const timeH = document.querySelector("h1");
 const container = document.querySelector(".container");
 const startBtn = document.querySelector(".start-btn");
@@ -230,6 +230,7 @@ document.addEventListener("keydown", function (e) {
   const winner = document.querySelector(".voice-winner");
   const modalContainer = document.querySelector(".modal-container");
   const winnerName = document.querySelector(".winner-name");
+  const winnerTwo = document.querySelector(".modal-container-two")
 
   closeModal.addEventListener("click", function () {
     modalContent.remove();
@@ -278,7 +279,7 @@ document.addEventListener("keydown", function (e) {
           winnerName.innerText = "Winner Player 2";
         }
       }
-
+      
       function endCount() {
         if ((timeH.innerHTML = "Time out")) {
           container.style.width = "150px";
