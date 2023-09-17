@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="css/fontawesome.css">
     <link rel="stylesheet" href="css/solid.css">
     <link rel="stylesheet" href="css/brands.css">
-=======
 </head>
 
 <body>
@@ -19,7 +18,7 @@
     <div class="container-start-menu">
         <h2>Flag Game</h2>
         <div class="start-menu">
-            <button id="myBtn" onclick="playAudio() , btnStart()" class="start-btn">Start</button>
+            <button id="myBtn" onclick="playAudio()" class="start-btn">Start</button>
             <audio id="myAudio">
                 <source src="voices/fight.ogg">
             </audio>
@@ -27,12 +26,14 @@
         </div>
         <div class="guid-menu">
             <div class="guid-bord">
+                <audio id="close">
+                    <source src="voices/drop_001.ogg">
+                </audio>
+                <img class="close-window" src="img/icons8-close-50.png" alt="close window">
                 <p>If the player who runs after the other player and can take the flag from him in less than 30 seconds
                     is the winner, otherwise he is the loser and the other player is the winner.
                 </p>
-                <hr>
                 <p>When player 1 wants to take the flag, he must use the "enter" key</p>
-                <hr>
                 <p>When player 2 wants to take the flag, he must use the "E" key</p>
             </div>
         </div>
@@ -55,33 +56,33 @@
     <section>
         <div class="class">
 
-            <div >
-                <img class="wall-two wall"
+            <div>
+                <img class="wall-two"
                     src="img/map/545-5458452_transparent-rock-texture-png-illustration-png-download.png" alt="">
             </div>
             <div>
-                <img class="wall-three wall" src="img/map/wall.png" alt="">
+                <img class="wall-three" src="img/map/wall.png" alt="">
             </div>
             <div>
-                <img class="wall-four wall"
+                <img class="wall-four"
                     src="img/map/545-5458452_transparent-rock-texture-png-illustration-png-download.png" alt="">
             </div>
             <div>
-                <img class="wall-five wall" src="img/map/wall.png" alt="">
+                <img class="wall-five" src="img/map/wall.png" alt="">
             </div>
             <div>
-                <img class="wall-six wall"
+                <img class="wall-six"
                     src="img/map/545-5458452_transparent-rock-texture-png-illustration-png-download.png" alt="">
             </div>
             <div>
-                <img class="wall-seven wall"
+                <img class="wall-seven"
                     src="img/map/545-5458452_transparent-rock-texture-png-illustration-png-download.png" alt="">
             </div>
             <div>
-                <img class="wall-eight wall" src="img/map/wall.png" alt="">
+                <img class="wall-eight" src="img/map/wall.png" alt="">
             </div>
             <div>
-                <img class="wall-nine wall" src="img/map/wall.png" alt="">
+                <img class="wall-nine" src="img/map/wall.png" alt="">
             </div>
         </div>
     </section>
@@ -92,6 +93,9 @@
         <div class="container-two">
             <div class="map">
                 <div class="flag"></div>
+                <audio id="getFlag">
+                    <source src="voices/close_004.ogg">
+                </audio>
                 <div id="player1" class="character"><img src="img/Poses/adventurer_action1.png" alt="">
                     <audio id="footVoice">
                         <source src="voices/footstep_carpet_000.ogg">
@@ -133,10 +137,7 @@
     </div>
     <!-- modal for show winner [end] -->
 
-    <script src="app.js">
-
-
-    </script>
+    <script src="app.js"></script>
 </body>
 
 </html>
