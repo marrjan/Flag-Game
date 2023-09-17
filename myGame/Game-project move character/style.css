@@ -1,0 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.flag{
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+}
+.character {
+  width: 60px;
+  height: 80px;
+  position: absolute;
+}
+#player1 {
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+}
+#player2 {
+  right: 0;
+  bottom: 100px; /* Adjust the initial position of player2 */
+  width: 30px;
+  height: 30px;
+}
+.flagPlayerOne, .flagPlayerTwo{
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  display: none;
+}
