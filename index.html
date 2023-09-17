@@ -8,6 +8,9 @@
     <title>Flag Game</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/Poses/head.png">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/solid.css">
+    <link rel="stylesheet" href="css/brands.css">
 </head>
 
 <body>
@@ -45,7 +48,7 @@
                 <source src="voices/time.ogg">
             </audio>
             <audio id="myVoiceTwo">
-                <source src="voices/final_round.ogg">
+                    <source src="voice/you_win.ogg">
             </audio>
         </div>
     </section>
@@ -117,6 +120,22 @@
         </div>
     </section>
     <!-- mostafa code end -->
+    <!-- modal for show winner [start] -->
+    <div class="modal-container">
+        <div class="modal-content">
+            <div class="close-modal">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+
+            <div class="img-modal">
+                <div>
+                    <img src="img/adventurer_cheer1.png" alt="">
+                    <p class="winner-name"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal for show winner [end] -->
 
     <script src="app.js"></script>
 </body>

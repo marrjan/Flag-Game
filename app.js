@@ -224,6 +224,23 @@ document.addEventListener("keydown", function (e) {
   // The difference between the x coordinates of the player two and the x coordinates of player one.
   const distanceOfPlayersX = cordinatePlayerTwoX - cordinatePlayerOneX;
 
+  // modal for show final winner [start]
+  const closeModal = document.querySelector(".fa-solid");
+  const modalContent = document.querySelector(".modal-content");
+  const winner = document.querySelector(".voice-winner");
+  const modalContainer = document.querySelector(".modal-container");
+  const winnerName = document.querySelector(".winner-name");
+
+  closeModal.addEventListener("click", function () {
+    modalContent.remove();
+    modalContainer.style.display = "none";
+  });
+
+  window.addEventListener("load", () => {
+    winner.play();
+  });
+  // modal for show final winner [end]
+
   // when difference between x cordinate of flag and player one be less than 10 , and press key "e" , player one can get the flag.
   if (distanceFlagXPlayerOne < 20 && distanceFlagXPlayerOne > -50) {
     if (e.key == "Enter") {
@@ -252,11 +269,13 @@ document.addEventListener("keydown", function (e) {
         }
         // when player one is winner.
         if (timeSecond <= 0 && flagPlayerOne.style.display == "block") {
-          alert("mahsaaa");
+          modalContainer.classList.add("show-modal-winner");
+          winnerName.innerText = "Winner Player 1";
         }
         // when player two is winner.
         if (timeSecond <= 0 && flagPlayerTwo.style.display == "block") {
-          alert("m");
+          modalContainer.classList.add("show-modal-winner");
+          winnerName.innerText = "Winner Player 2";
         }
       }
 
