@@ -229,6 +229,7 @@ document.addEventListener("keydown", function (e) {
   const modalContent = document.querySelector(".modal-content");
   const winner = document.querySelector(".voice-winner");
   const modalContainer = document.querySelector(".modal-container");
+  const winnerName = document.querySelector(".winner-name");
 
   closeModal.addEventListener("click", function () {
     modalContent.remove();
@@ -268,10 +269,12 @@ document.addEventListener("keydown", function (e) {
         // when player one is winner.
         if (timeSecond <= 0 && flagPlayerOne.style.display == "block") {
           modalContainer.classList.add("show-modal-winner");
+          winnerName.innerText = "Winner Player 1";
         }
         // when player two is winner.
         if (timeSecond <= 0 && flagPlayerTwo.style.display == "block") {
           modalContainer.classList.add("show-modal-winner");
+          winnerName.innerText = "Winner Player 2";
         }
       }
 
