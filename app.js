@@ -233,6 +233,7 @@ document.addEventListener("keydown", function (e) {
 
   closeModal.addEventListener("click", function () {
     modalContent.remove();
+    modalContainer.style.display = "none";
   });
 
   window.addEventListener("load", () => {
