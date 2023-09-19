@@ -213,16 +213,22 @@ document.addEventListener("keydown", function (e) {
   const flagLeftX = flagCordinate.left;
   // get cordinate of right flag.
   const flagRightX = flagCordinate.right;
+  // get cordinate of y flag
+  const flagTop = flagCordinate.top;
   // get cordinate right of player one.
   const cordinatePlayerOneX = cordinatePlayerOne.right;
   // get cordinate left of player two.
   const cordinatePlayerTwoX = cordinatePlayerTwo.left;
+  const cordinatePlayerOneY = cordinatePlayerOne.top;
+  const cordinatePlayerTwoY = cordinatePlayerTwo.top;
   // The difference between the x coordinates of the flag and the x coordinates of the first player.
   const distanceFlagXPlayerOne = flagLeftX - cordinatePlayerOneX;
   // The difference between the x coordinates of the flag and the x coordinates of the first player.
-  const distanceFlagXPlayerTwo = flagRightX - cordinatePlayerTwoX;
+  const distanceFlagXPlayerTwo = cordinatePlayerTwoX - flagRightX;
   // The difference between the x coordinates of the player two and the x coordinates of player one.
   const distanceOfPlayersX = cordinatePlayerTwoX - cordinatePlayerOneX;
+  // The difference between the y coordinates of the flag and the y coordinates of the first player.
+  const distanceFlagYPlayerOne = flagTop - cordinatePlayerOneY;
 
   // modal for show final winner [start]
   const closeModal = document.querySelector(".fa-solid");
@@ -230,7 +236,7 @@ document.addEventListener("keydown", function (e) {
   const winner = document.querySelector(".voice-winner");
   const modalContainer = document.querySelector(".modal-container");
   const winnerName = document.querySelector(".winner-name");
-  const winnerTwo = document.querySelector(".modal-container-two")
+  const winnerTwo = document.querySelector(".modal-container-two");
 
   closeModal.addEventListener("click", function () {
     modalContent.remove();
@@ -243,7 +249,12 @@ document.addEventListener("keydown", function (e) {
   // modal for show final winner [end]
 
   // when difference between x cordinate of flag and player one be less than 10 , and press key "e" , player one can get the flag.
-  if (distanceFlagXPlayerOne < 20 && distanceFlagXPlayerOne > -50) {
+  if (
+    distanceFlagXPlayerOne < 20 &&
+    distanceFlagXPlayerOne > -50 &&
+    distanceFlagYPlayerOne < 160 &&
+    distanceFlagYPlayerOne > -40
+  ) {
     if (e.key == "Enter") {
       flag.style.display = "none";
       flagPlayerOne.style.display = "block";
@@ -273,13 +284,7 @@ document.addEventListener("keydown", function (e) {
           modalContainer.classList.add("show-modal-winner");
           winnerName.innerText = "Winner Player 1";
         }
-        // when player two is winner.
-        if (timeSecond <= 0 && flagPlayerTwo.style.display == "block") {
-          modalContainer.classList.add("show-modal-winner");
-          winnerName.innerText = "Winner Player 2";
-        }
       }
-      
       function endCount() {
         if ((timeH.innerHTML = "Time out")) {
           container.style.width = "150px";
@@ -288,7 +293,7 @@ document.addEventListener("keydown", function (e) {
       }
       getFlag.play();
     }
-  } else if (distanceFlagXPlayerTwo < 50 && distanceFlagXPlayerTwo > -20) {
+  } else if (distanceFlagXPlayerTwo < 20 && distanceFlagXPlayerTwo > -150) {
     if (e.key == "e") {
       flag.style.display = "none";
       flagPlayerTwo.style.display = "block";
@@ -312,6 +317,10 @@ document.addEventListener("keydown", function (e) {
         if (timeSecond <= 5) {
           myVoice.play();
           timeH.style.color = "red";
+        }
+        // when player two is winner.
+        if (timeSecond <= 0 && flagPlayerTwo.style.display == "block") {
+          winnerName.innerText = "Winner Player 2";
         }
       }
 
