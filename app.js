@@ -379,7 +379,7 @@ document.addEventListener("keydown", function (e) {
       getFlag.play();
     }
   } else if (
-    distanceOfPlayersX < 100 &&
+    distanceOfPlayersX < 120 &&
     distanceOfPlayersX > -200 &&
     distanceOfPlayersY < 200 &&
     distanceOfPlayersY > -200
