@@ -6,7 +6,6 @@
 }
 
 body {
-  /* background-color: rgb(71, 52, 52); */
   background: url(img/map/IMG_6199.JPG);
   height: 100vh;
   width: 100%;
@@ -321,7 +320,7 @@ border-radius: 15px;
   margin-top: 90px;
 }
 
-.close-modal {
+.close-modal{
   font-size: 27px;
   background-color: rgb(255, 220, 22);
   width: 40px;
@@ -330,6 +329,7 @@ border-radius: 15px;
   position: absolute;
   right: 20px;
   top: 5px;
+  cursor: pointer;
 }
 
 .close-modal i{

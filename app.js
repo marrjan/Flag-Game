@@ -195,7 +195,7 @@ document.addEventListener("keydown", handleKeyDownPlayer2);
 document.addEventListener("keyup", handleKeyUpPlayer2);
 
 setInterval(detectKeys, 10); // Call detectKeys function periodically
-const modalContainerTwo = document.querySelector(".modal-container-two");
+
 // charachter's can get and keep the flag[start]
 // select flag
 const flag = document.querySelector(".flag");
@@ -231,6 +231,8 @@ document.addEventListener("keydown", function (e) {
   const distanceFlagYPlayerOne = flagTop - cordinatePlayerOneY;
   // The difference between the Y coordinates of the flag and the Y coordinates of the second player.
   const distanceFlagYPlayerTwo = flagTop - cordinatePlayerTwoY;
+  // The difference between the Y coordinates of the flag and the Y coordinates of the second player.
+  const distanceOfPlayersY = cordinatePlayerOneY - cordinatePlayerTwoY;
 
   // modal for show final winner [start]
   const closeModal = document.querySelector(".fa-solid");
@@ -238,7 +240,8 @@ document.addEventListener("keydown", function (e) {
   const winner = document.querySelector(".voice-winner");
   const modalContainer = document.querySelector(".modal-container");
   const winnerName = document.querySelector(".winner-name");
-  const winnerTwo = document.querySelector(".modal-container-two");
+  // modal of player two.
+  const modalContainerTwo = document.querySelector(".modal-container-two");
 
   closeModal.addEventListener("click", function () {
     modalContent.remove();
@@ -252,8 +255,8 @@ document.addEventListener("keydown", function (e) {
 
   // when difference between x cordinate of flag and player one be less than 10 , and press key "e" , player one can get the flag.
   if (
-    distanceFlagXPlayerOne < 20 &&
-    distanceFlagXPlayerOne > -50 &&
+    distanceFlagXPlayerOne < 30 &&
+    distanceFlagXPlayerOne > -120 &&
     distanceFlagYPlayerOne < 160 &&
     distanceFlagYPlayerOne > -40
   ) {
@@ -340,7 +343,12 @@ document.addEventListener("keydown", function (e) {
       }
       getFlag.play();
     }
-  } else if (distanceOfPlayersX < 20 && distanceOfPlayersX > -70) {
+  } else if (
+    distanceOfPlayersX < 50 &&
+    distanceOfPlayersX > -150 &&
+    distanceOfPlayersY < 150 &&
+    distanceOfPlayersY > -150
+  ) {
     if (e.key == "Enter") {
       flagPlayerOne.style.display = "block";
       flagPlayerTwo.style.display = "none";
@@ -370,7 +378,12 @@ document.addEventListener("keydown", function (e) {
       }
       getFlag.play();
     }
-  } else if (distanceOfPlayersX < 10 && distanceOfPlayersX > -100) {
+  } else if (
+    distanceOfPlayersX < 100 &&
+    distanceOfPlayersX > -200 &&
+    distanceOfPlayersY < 200 &&
+    distanceOfPlayersY > -200
+  ) {
     if (e.key == "e") {
       flagPlayerOne.style.display = "none";
       flagPlayerTwo.style.display = "block";
