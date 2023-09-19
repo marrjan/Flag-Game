@@ -274,9 +274,9 @@ document.addEventListener("keydown", function (e) {
       function displayTime(second) {
         const min = Math.floor(second / 60);
         const sec = Math.floor(second % 60);
-        timeH.innerHTML = `
-    ${min < 10 ? "0" : ""}${min}:${sec < 10 ? "0" : ""}${sec}
-    `;
+        timeH.innerHTML = `${min < 10 ? "0" : ""}${min}:${
+          sec < 10 ? "0" : ""
+        }${sec}`;
         if (timeSecond <= 5) {
           myVoice.play();
           timeH.style.color = "red";
@@ -318,9 +318,9 @@ document.addEventListener("keydown", function (e) {
       function displayTime(second) {
         const min = Math.floor(second / 60);
         const sec = Math.floor(second % 60);
-        timeH.innerHTML = `
-    ${min < 10 ? "0" : ""}${min}:${sec < 10 ? "0" : ""}${sec}
-    `;
+        timeH.innerHTML = `${min < 10 ? "0" : ""}${min}:${
+          sec < 10 ? "0" : ""
+        }${sec}`;
         if (timeSecond <= 5) {
           myVoice.play();
           timeH.style.color = "red";
@@ -344,11 +344,61 @@ document.addEventListener("keydown", function (e) {
     if (e.key == "Enter") {
       flagPlayerOne.style.display = "block";
       flagPlayerTwo.style.display = "none";
+      displayTime(30);
+      // timer
+      const countDown = setInterval(() => {
+        timeSecond--;
+        displayTime(timeSecond);
+        if (timeSecond == 0 || timeSecond < 1) {
+          endCount();
+          clearInterval(countDown);
+        }
+      }, 1000);
+
+      function displayTime(second) {
+        // when player one is winner.
+        if (timeSecond <= 0 && flagPlayerOne.style.display == "block") {
+          modalContainer.classList.add("show-modal-winner");
+          winnerName.innerText = "Winner Player 1";
+        }
+      }
+      function endCount() {
+        if ((timeH.innerHTML = "Time out")) {
+          container.style.width = "150px";
+          myVoiceTwo.play();
+        }
+      }
+      getFlag.play();
     }
   } else if (distanceOfPlayersX < 10 && distanceOfPlayersX > -100) {
     if (e.key == "e") {
       flagPlayerOne.style.display = "none";
       flagPlayerTwo.style.display = "block";
+      // timer
+      const countDown = setInterval(() => {
+        timeSecond--;
+        displayTime(timeSecond);
+        if (timeSecond == 0 || timeSecond < 1) {
+          endCount();
+          clearInterval(countDown);
+        }
+      }, 1000);
+
+      function displayTime(second) {
+        // when player two is winner.
+        if (timeSecond <= 0 && flagPlayerTwo.style.display == "block") {
+          modalContainerTwo.classList.add("show-modal-winner");
+          winnerName.innerText = "Winner Player 2";
+        }
+      }
+
+      function endCount() {
+        if ((timeH.innerHTML = "Time out")) {
+          container.style.width = "150px";
+          myVoiceTwo.play();
+        }
+      }
+      getFlag.play();
     }
   }
 });
